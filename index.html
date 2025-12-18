@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ever Clean Prime Mobile Car Wash</title>
+  <title>Ever Clean Wash | Touchless Mobile Car Wash</title>
   <style>
     @keyframes fadeSlideIn {
       from { opacity: 0; transform: translateY(20px); }
@@ -70,7 +70,6 @@
         radial-gradient(circle at 10% 20%, rgba(14,165,233,0.08) 2px, transparent 3px),
         radial-gradient(circle at 80% 70%, rgba(37,99,235,0.08) 3px, transparent 4px);
       background-size: 160px 160px, 220px 220px;
-
       padding: 60px 20px;
       max-width: 1000px;
       margin: auto;
@@ -85,9 +84,21 @@
       border-radius: 12px;
       padding: 25px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      position: relative;
     }
-    .card h3 {
-      margin-top: 0;
+    .unavailable {
+      opacity: 0.55;
+    }
+    .unavailable::after {
+      content: "✕";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 8rem;
+      color: rgba(220,38,38,0.8);
+      font-weight: 900;
+      pointer-events: none;
     }
     footer {
       background: #0f172a;
@@ -105,23 +116,72 @@
 
 <header>
   
-  <img src="ever-clear-hero.webp" alt="Ever Clean Prime Superhero" loading="lazy" decoding="async" width="320" height="420" style="max-width:320px; width:100%; border-radius:20px; box-shadow:0 20px 40px rgba(0,0,0,0.25); animation: floatHero 4s ease-in-out infinite;" />
+  <img src="ever-clear-hero.webp" alt="Ever Clean Wash Superhero" loading="lazy" decoding="async" style="max-width:320px; width:100%; height:auto; object-fit:contain; border-radius:20px; box-shadow:0 20px 40px rgba(0,0,0,0.25); animation: floatHero 4s ease-in-out infinite;" />
   <div>
-    <h1>Ever Clean Prime</h1>
-    <div class="tagline">The Hero Your Car Deserves</div>
-    <p>We come to your home or office and make your car shine. No waiting, no hassle — just clean cars.</p>
+    <h1>Ever Clean Wash</h1>
+    <div class="tagline">Touchless • Fast • Mobile</div>
+    <p>We provide a <strong>touchless, quick car wash</strong> at your home or office using high‑pressure water and professional detergents. No brushes. No contact. No hassle.</p>
     <a href="#contact" class="btn">Book Now</a>
   </div>
 </header>
 
-<section>
+<section id="how-it-works">
   <h2>How It Works</h2>
   <div class="grid">
     <div class="card">
-      <h3>Premium Detail</h3>
-      <p>Deep interior cleaning, wax, shampoo, and full exterior protection.</p>
-      <p><strong>$150 – Sedan / $180 – SUV & Truck</strong></p>
-      <a href="https://square.link/u/usiSU7hW" class="btn" target="_blank" rel="noopener">Pay Online</a>
+      <h3>1. Book & Pay Online</h3>
+      <p>Select your service and secure your spot with a quick online deposit.</p>
+    </div>
+    <div class="card">
+      <h3>2. Touchless Wash</h3>
+      <p>We use high‑pressure water and foam to safely remove dirt without touching your vehicle.</p>
+    </div>
+    <div class="card">
+      <h3>3. Drive Clean</h3>
+      <p>A fast, scratch‑free wash so you can get back on the road.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Basic Wash (Touchless)</h3>
+      <p><strong>$15 – $30</strong></p>
+      <p><em>Pricing may vary based on distance and service location.</em></p>
+      <p>A fast, touchless exterior wash designed to safely clean your vehicle without physical contact.</p>
+      <ul>
+        <li>High‑pressure touchless exterior wash</li>
+        <li>Touchless foam soap application</li>
+        <li>Undercarriage rinse</li>
+        <li>Spot‑free rinse</li>
+        <li>No brushes or physical contact</li>
+      </ul>
+    </div>
+    <div class="card unavailable">
+      <h3>Full Detail (Unavailable)
+      <p><strong>Starting at $120</strong></p>
+      <p>Inside and out cleaning for a deeper, longer-lasting clean.</p>
+      <ul>
+        <li>Everything in the Basic Wash</li>
+        <li>Interior vacuum (seats, carpets, mats)</li>
+        <li>Dashboard, console, and door panel wipe-down</li>
+        <li>Interior window cleaning</li>
+      </ul>
+    </div>
+    <div class="card unavailable">
+      <h3>Premium Detail (Unavailable)
+      <p><strong>Starting at $180</strong></p>
+      <p>Our most complete service for maximum shine and protection.</p>
+      <ul>
+        <li>Everything in the Full Detail</li>
+        <li>Deep interior cleaning and stain treatment</li>
+        <li>Tire and rim shine</li>
+        <li>Wax or paint sealant (optional add-on)</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -131,6 +191,7 @@
   <div class="card">
     <p>Secure online payments are available for your convenience.</p>
     <p><strong>Accepted:</strong> Credit / Debit Cards, Apple Pay, Google Pay</p>
+    <p><strong>Payment Policy:</strong> A 50% deposit is required at the time of booking to secure your appointment. The remaining balance will be automatically deducted after the wash is completed.</p>
     <p>
       👉 <em>Secure checkout powered by Square.</em>
     </p>
@@ -152,11 +213,11 @@
   <h2>Contact & Booking</h2>
   <div class="card">
     <p><strong>Phone:</strong> (720) 938-3468</p>
-    <p><strong>Email:</strong> everclearanderson@gmail.com</p>
+    <p><strong>Email:</strong> evercleanprime@gmail.com</p>
     <p><strong>Service Area:</strong> Anderson Township, OH and surrounding areas.</p>
     <hr />
     <h3>Book a Service</h3>
-    <form action="mailto:everclearanderson@gmail.com" method="post" enctype="text/plain">
+    <form action="mailto:evercleanprime@gmail.com" method="post" enctype="text/plain">
       <p>
         <label>Name<br />
           <input type="text" name="Name" required style="width:100%; padding:10px;" />
@@ -195,8 +256,11 @@
 </section>
 
 <footer>
-  <p>© 2025 Ever Clean Prime. All rights reserved.</p>
-  <p>Built for a mobile, house-to-house car wash service.</p>
+  <p>© 2025 Ever Clean Wash. All rights reserved.</p>
+  <p>Built for a fast, touchless mobile car wash service.</p>
+  <p>© 2025 Ever Clean Wash. All rights reserved.</p>
+  <p>Built for a fast, touchless mobile car wash service.</p>
+  <p><a href="disclaimer.html">Disclaimer & Terms of Service</a></p>
 </footer>
 
 </body>
